@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neel Patel - Software Engineer</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+
+    <style>
+        .project-section {
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+.bg{
+    background-color: "blue";
+}
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 0 20px;
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .project-card {
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .project-card img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        .project-card h3 {
+            font-size: 1.1em;
+            margin: 10px;
+        }
+
+        .project-card p {
+            font-size: 0.9em;
+            margin: 10px;
+            color: #666;
+        }
+
+        @media (max-width: 768px) {
+            .project-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+
+</head>
+<body>
+
+    <header>
+        <div>
+            <img src="Neel Patel Picture.jpeg" alt="Neel Patel">
+            <h1>Neel Patel</h1>
+            <p>Software Engineer, Problem Solver, Innovator, Quick Learner</p>
+            <p>+1 6478970169</p>
+            <p>neel77306@gmail.com</p>
+        </div>
+    </header>
+
+    <section class="social-links">
+        <a href="https://www.linkedin.com/in/neel-patel-90448b17a/" class="social-link">
+            <img src="https://i.ibb.co/9n8kTnQ/LinkedIn.png" alt="LinkedIn" class="social-icon"/> LinkedIn
+        </a>
+        <a href="https://github.com/Neelpatel77" class="social-link">
+            <img src="https://i.ibb.co/SNyLsCR/GitHub.png" alt="GitHub" class="social-icon"/> GitHub
+        </a>
+    </section>
+    
+ 
+    <nav>
+        <div>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li class="bg"><a href="Contact.html" class="bg">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <section id="education">
+        <div class="container">
+            <h2>Education</h2>
+            <div class="education-items">
+                <!-- Education Item 1 -->
+                <div class="education-item">
+                    <h3>Post Graduation in Mobile Application Development</h3>
+                    <p>[Jan’2023 – May’2024]</p>
+                    <p>Fanshawe College | London, Ontario, Canada</p>
+                    <p>GPA: 3.90/4.20</p>
+                </div>
+                
+                <!-- Education Item 2 -->
+                <div class="education-item">
+                    <h3>Bachelors Degree in Computer Engineering (B.Eng.)</h3>
+                    <p>[May’2018 – May’2022]</p>
+                    <p>Gujarat Technological University | Ahmedabad, Gujarat, India</p>
+                    <p>CGPA: 8.33/10.00</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+  
+    <!-- Experience Section -->
+    <section id="experience">
+        <div class="container">
+            <h2>Experience</h2>
+            <div class="experience-items">
+                <!-- Experience Item 1 -->
+                <div class="experience-item">
+                    <h3>Android Engineer (Freelance)</h3>
+                    <p>[Feb‘2023-July’2023]</p>
+                    <p>Shopify, Toronto, ON, Canada</p>
+                </div>
+
+                <!-- Experience Item 2 -->
+                <div class="experience-item">
+                    <h3>Software Developer (Remote)</h3>
+                    <p>[Jun‘2022-Jan’2023]</p>
+                    <p>zCon Solutions Pvt. Ltd. Pune, India</p>
+                </div>
+
+                <!-- Additional experience items -->
+                <div class="experience-item">
+                    <h3>UI/UX front-end Web Developer</h3>
+                    <p>[May‘2021-Jul’2022]</p>
+                    <p>Suven Consultancy & Technology Pvt. Ltd., Mumbai</p>
+                </div>
+                <div class="experience-item">
+                    <h3>Software Engineer Intern</h3>
+                    <p>[Jan‘2020-May’2021]</p>
+                    <p>Einfochips, Ahmedabad</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section id="skills">
+        <div class="container">
+            <h2>Skills</h2>
+            
+            <!-- Skills List -->
+            <div class="skills-list">
+                <h3>Programming Languages:</h3>
+                <p>Kotlin, Swift, Java, JavaScript, Python, C++, C</p>
+            </div>
+            
+            <!-- Android Development -->
+            <div class="skills-list">
+                <h3>Android Development:</h3>
+                <p>Modern Android App Architectures, RESTful API Integration, Networking and Data Management, Expertise in Kotlin, Dependency Injection, Performance Optimization, UI/UX and Animations, Mobile App Security, Software Testing, Google Map Integration, Expertise with Android Studio Debug, Clean Architecture, Google Play Store Deployment</p>
+            </div>
+            
+            <!-- iOS Development -->
+            <div class="skills-list">
+                <h3>iOS Development:</h3>
+                <p>SwiftUI, RESTful API Integration, UI/UX Development, Networking and Data Management, Advanced Frameworks and Features, Performance Optimization, UIKit Dynamics, Core Location, Testing and Debugging, Apple App Store Deployment</p>
+            </div>
+            
+            <!-- Data Structures and Algorithm -->
+            <div class="skills-list">
+                <h3>Data Structures and Algorithm:</h3>
+                <p>Trees, Graphs, Linked List, Hash, Greedy Algorithms, Dynamic Programming, Knapsack Problem, Longest Common Subsequence, Matrix Multiplication Algorithm, NP Hard Problem-solving, NP complete Problem-Solving, Sorting and Searching Algorithm, Time and Space complexity</p>
+            </div>
+            
+            <!-- DevOps & Deployment -->
+            <div class="skills-list">
+                <h3>DevOps & Deployment:</h3>
+                <p>Infrastructure as Code (Terraform), CI/CD Tools (Jenkins, Travis CI), DevOps Practices</p>
+            </div>
+            
+            <!-- Software Development Methodologies -->
+            <div class="skills-list">
+                <h3>Software Development Methodologies:</h3>
+                <p>Agile Methodologies (Scrum), Test-Driven Development (TDD), Continuous Integration, Continuous Deployment (CI/CD), Waterfall Methodology</p>
+            </div>
+            
+            <!-- Web Development -->
+            <div class="skills-list">
+                <h3>Web Development:</h3>
+                <p>React.js, Node.js, Angular.js, TypeScript, HTML5, CSS, Material UI, Material Theme, Responsive Web Design, Progressive Web Apps (PWAs), Single Page Applications (SPAs), Front-End Testing (Jest, Enzyme)</p>
+            </div>
+            
+            <!-- Back-End Development and Database -->
+            <div class="skills-list">
+                <h3>Back-End Development and Database:</h3>
+                <p>Authentication and Authorization Systems (JWT, OAuth), GraphQL Server Implementations, RESTful API Design Best Practices, Database Scaling and Optimization, Serverless Computing (AWS Lambda, Azure Functions), Docker Deployment, Firebase Database, NoSQL Databases (MongoDB, Cassandra), Data Modeling, Oracle, SQL, MySQL Databases, Automated Testing Frameworks, Apache Tomcat Server, Node.js Web Server, Virtualization</p>
+            </div>
+            
+            <!-- Computer Science & Mathematics -->
+            <div class="skills-list">
+                <h3>Computer Science & Mathematics:</h3>
+                <p>Data Structures, Algorithm Development, Object-Oriented Programming, Operating Systems, Calculus, Linear Algebra</p>
+            </div>
+            
+            <!-- Interpersonal Skills -->
+            <div class="skills-list">
+                <h3>Interpersonal Skills:</h3>
+                <p>Leadership, Analytical, Innovative, Results-Oriented, Tech-Savvy, Adaptable, Problem-Solving, Goal-Driven, Self-Motivated, Adaptable, Deadline-Focused, Proactive, Detail-Oriented, Multitasking, Resourceful</p>
+            </div>
+        </div>
+    </section>
+    
+
+    <section class="project-section">
+        <div class="container">
+            <div class="project-grid">
+                <!-- Repeat the following block for each project card (total 9 cards) -->
+                <!-- Project Card 1 -->
+                <div class="project-card" onclick="window.open('https://clipchamp.com/watch/vyPYqVLATRR', '_blank')">
+                    <img src="PROJECT_THUMBNAIL_1" alt="Project 1 Thumbnail">
+                    <h3>Project Title 1</h3>
+                    <p>Short description or tagline</p>
+                </div>
+    <!-- Project Card 2 -->
+<div class="project-card" onclick="window.open('YOUR_VIDEO_LINK_2', '_blank')">
+    <img src="PROJECT_THUMBNAIL_2" alt="Project 2 Thumbnail">
+    <h3>Project Title 2</h3>
+    <p>Short description or tagline for Project 2</p>
+</div>
+
+<!-- Project Card 3 -->
+<div class="project-card" onclick="window.open('YOUR_VIDEO_LINK_3', '_blank')">
+    <img src="PROJECT_THUMBNAIL_3" alt="Project 3 Thumbnail">
+    <h3>Project Title 3</h3>
+    <p>Short description or tagline for Project 3</p>
+</div>
+
+<!-- Project Card 4 -->
+<div class="project-card" onclick="window.open('YOUR_VIDEO_LINK_4', '_blank')">
+    <img src="PROJECT_THUMBNAIL_4" alt="Project 4 Thumbnail">
+    <h3>Project Title 4</h3>
+    <p>Short description or tagline for Project 4</p>
+</div>
+
+<!-- Project Card 5 -->
+<div class="project-card" onclick="window.open('YOUR_VIDEO_LINK_5', '_blank')">
+    <img src="PROJECT_THUMBNAIL_5" alt="Project 5 Thumbnail">
+    <h3>Project Title 5</h3>
+    <p>Short description or tagline for Project 5</p>
+</div>
+
+<!-- Project Card 6 -->
+<div class="project-card" onclick="window.open('YOUR_VIDEO_LINK_6', '_blank')">
+    <img src="PROJECT_THUMBNAIL_6" alt="Project 6 Thumbnail">
+    <h3>Project Title 6</h3>
+    <p>Short description or tagline for Project 6</p>
+</div>
+
+<!-- Project Card 7 -->
+<div class="project-card" onclick="window.open('YOUR_VIDEO_LINK_7', '_blank')">
+    <img src="PROJECT_THUMBNAIL_7" alt="Project 7 Thumbnail">
+    <h3>Project Title 7</h3>
+    <p>Short description or tagline for Project 7</p>
+</div>
+
+<!-- Project Card 8 -->
+<div class="project-card" onclick="window.open('YOUR_VIDEO_LINK_8', '_blank')">
+    <img src="PROJECT_THUMBNAIL_8" alt="Project 8 Thumbnail">
+    <h3>Project Title 8</h3>
+    <p>Short description or tagline for Project 8</p>
+</div>
+
+<!-- Project Card 9 -->
+<div class="project-card" onclick="window.open('https://clipchamp.com/watch/mNTa2zAhtLw', '_blank')">
+    <img src="PROJECT_THUMBNAIL_9" alt="Project 9 Thumbnail">
+    <h3>Project Title 9</h3>
+    <p>Short description or tagline for Project 9</p>
+</div>
+
+</div>
+</div>
+</section>  
+
+ 
+    <footer>
+        <p>&copy; 2023 Neel Patel</p>
+    </footer>
+
+</body>
+</html>
