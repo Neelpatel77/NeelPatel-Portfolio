@@ -1,27 +1,133 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Neel Patel - Software Engineer</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
 
     <style>
-        .project-section {
-            padding: 20px;
+        /* Basic Body Styling */
+        body {
+            font-family: 'Poppins', sans-serif;
             background-color: #f4f4f4;
-        }
-.bg{
-    background-color: "blue";
-}
-        .container {
-            max-width: 1200px;
-            margin: auto;
-            padding: 0 20px;
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
         }
 
+        /* Navbar Styling */
+        nav {
+            background-color: #004d40;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: 15px 0;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            margin: 0;
+        }
+
+        nav ul li {
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            background-color: #00e676;
+            color: #004d40;
+            border-radius: 5px;
+        }
+
+        /* Header Styling */
+        header {
+            text-align: center;
+            padding: 50px 0;
+            background-color: #004d40;
+            color: white;
+        }
+
+        header img {
+            width: 150px;
+            border-radius: 50%;
+        }
+
+        header h1 {
+            margin: 20px 0 10px;
+            font-size: 2.5rem;
+        }
+
+        header p {
+            font-size: 1.2rem;
+        }
+
+        /* Social Links */
+        .social-links {
+            text-align: center;
+            padding: 10px;
+        }
+
+        .social-links a {
+            margin: 0 15px;
+            color: #004d40;
+            transition: transform 0.3s ease;
+        }
+
+        .social-links a:hover {
+            transform: scale(1.1);
+        }
+
+        /* Section Styling */
+        section {
+            padding: 50px 20px;
+            background-color: white;
+            margin: 20px 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        section h2 {
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 30px;
+            color: #004d40;
+        }
+
+        /* Skills & Experience Styling */
+        .experience-item, .skills-list {
+            padding: 20px 0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .experience-item:last-child, .skills-list:last-child {
+            border-bottom: none;
+        }
+
+        .experience-item h3, .skills-list h3 {
+            font-size: 1.5rem;
+            color: #004d40;
+        }
+
+        .experience-item p, .skills-list p {
+            font-size: 1rem;
+            margin: 5px 0;
+        }
+
+        /* Projects Section */
         .project-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -32,35 +138,31 @@
             background-color: #ffffff;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
+            transition: transform 0.3s ease;
             cursor: pointer;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-        }
-
-        .project-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
         }
 
         .project-card img {
             width: 100%;
             height: auto;
-            object-fit: cover;
+            border-radius: 10px 10px 0 0;
         }
 
         .project-card h3 {
-            font-size: 1.1em;
-            margin: 10px;
+            text-align: center;
+            padding: 10px;
+            font-size: 1.2rem;
+            color: #004d40;
         }
 
         .project-card p {
-            font-size: 0.9em;
-            margin: 10px;
-            color: #666;
+            text-align: center;
+            padding: 10px;
+            font-size: 0.9rem;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
         }
 
         @media (max-width: 768px) {
@@ -68,129 +170,117 @@
                 grid-template-columns: 1fr;
             }
         }
-    </style>
 
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #004d40;
+            color: white;
+        }
+    </style>
 </head>
 <body>
 
-    <header>
-        <div>
-            <img src="Neel Patel Picture.jpeg" alt="Neel Patel">
-            <h1>Neel Patel</h1>
-            <p>Software Engineer, Problem Solver, Innovator, Quick Learner</p>
-            <p>+1 6478970169</p>
-            <p>neel77306@gmail.com</p>
-        </div>
-    </header>
-
-    <section class="social-links">
-        <a href="https://www.linkedin.com/in/neel-patel-90448b17a/" class="social-link">
-            <img src="https://i.ibb.co/9n8kTnQ/LinkedIn.png" alt="LinkedIn" class="social-icon"/> LinkedIn
-        </a>
-        <a href="https://github.com/Neelpatel77" class="social-link">
-            <img src="https://i.ibb.co/SNyLsCR/GitHub.png" alt="GitHub" class="social-icon"/> GitHub
-        </a>
-    </section>
-    
- 
+    <!-- Navbar -->
     <nav>
-        <div>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li class="bg"><a href="Contact.html" class="bg">Contact</a></li>
-            </ul>
-        </div>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
     </nav>
 
+    <!-- Header -->
+    <header>
+        <img src="Neel Patel Picture.jpeg" alt="Neel Patel">
+        <h1>Neel Patel</h1>
+        <p>Software Engineer, Problem Solver, Innovator, Quick Learner</p>
+        <p>+1 6478970169 | neel77306@gmail.com</p>
+    </header>
 
-    <section id="education">
-        <div class="container">
-            <h2>Education</h2>
-            <div class="education-items">
-                <!-- Education Item 1 -->
-                <div class="education-item">
-                    <h3>Post Graduation in Mobile Application Development</h3>
-<!--                     <p>[Jan’2023 – Apr’2024]</p> -->
-                    <p>Fanshawe College | London, Ontario, Canada</p>
-                    <p>GPA: 3.90/4.20</p>
-                </div>
-                
-                <!-- Education Item 2 -->
-                <div class="education-item">
-                    <h3>Bachelors Degree in Computer Engineering (B.Eng.)</h3>
-<!--                     <p>[May’2018 – May’2022]</p> -->
-                    <p>Gujarat Technological University | Ahmedabad, Gujarat, India</p>
-                    <p>CGPA: 8.33/10.00</p>
-                </div>
-            </div>
+    <!-- Social Links -->
+    <section class="social-links">
+        <a href="https://www.linkedin.com/in/neel-patel-90448b17a/" target="_blank">
+            <i class="fab fa-linkedin fa-2x"></i>
+        </a>
+        <a href="https://github.com/Neelpatel77" target="_blank">
+            <i class="fab fa-github fa-2x"></i>
+        </a>
+    </section>
+
+    <!-- Education -->
+    <section id="education" class="container">
+        <h2>Education</h2>
+        <div class="education-item">
+            <h3>Post Graduation in Mobile Application Development</h3>
+            <p>Fanshawe College | London, Ontario, Canada</p>
+            <p>GPA: 3.90/4.20</p>
+        </div>
+        <div class="education-item">
+            <h3>Bachelors Degree in Computer Engineering (B.Eng.)</h3>
+            <p>Gujarat Technological University | Ahmedabad, Gujarat, India</p>
+            <p>CGPA: 8.33/10.00</p>
         </div>
     </section>
 
-  
-    <!-- Experience Section -->
-<section id="experience" class="container">
-    <h2>Experience</h2>
-    <div class="experience-items">
+    <!-- Experience -->
+    <section id="experience" class="container">
+        <h2>Experience</h2>
         <div class="experience-item">
             <h3>DevOps/Software Engineer, HCL Technology (Remote)</h3>
             <p>May 2023 - May 2024</p>
         </div>
-
         <div class="experience-item">
             <h3>Software Engineer, zCon Solutions Pvt. Ltd.</h3>
             <p>Jun 2022 - Jan 2023</p>
         </div>
-
         <div class="experience-item">
             <h3>Software Engineer, Cognizant (Hybrid)</h3>
             <p>Jan 2021 - Mar 2022</p>
         </div>
-
         <div class="experience-item">
             <h3>Software Engineer, L&T Infotech (LTI)</h3>
             <p>Mar 2019 - Jul 2020</p>
         </div>
-    </div>
-</section>
+    </section>
 
-
-
+    <!-- Skills -->
     <section id="skills" class="container">
-    <h2>Skills</h2>
-    <div class="skills-list">
-        <h3>Programming Languages and Frameworks:</h3>
-        <p>JavaScript, Java, Typescript, C++, C#, .NET, Kotlin, Swift, Objective-C, React Native</p>
-        
-        <h3>Full-Stack Web Development:</h3>
-        <p>React.js, Angular.js, Node.js, Express.js, Next.js</p>
-        
-        <h3>Mobile Development:</h3>
-        <p>Android SDK, iOS SDK, Kotlin, Swift, SwiftUI, Java, React Native, Objective-C, Xamarin</p>
-        
-        <h3>Database Management:</h3>
-        <p>Firebase, MongoDB, Oracle Database, PostgreSQL, SQL, Room Database, SQLite</p>
-        
-        <h3>DevOps and Deployment:</h3>
-        <p>AWS, Azure, Docker, Continuous Integration and Deployment, Google Cloud Platform, Google Compute Engine, Kubernetes, Git, GitHub, CircleCI, Jenkins, GitLab CI, Terraform, Ansible</p>
-        
-        <h3>APIs and Architecture:</h3>
-        <p>RESTful API, GraphQL, Application Architecture</p>
-        
-        <h3>Software Engineering:</h3>
-        <p>Software Testing, Software Security, Dependency Injection, Jira, Development Methodologies, Data Structures and Algorithms, Prometheus, Grafana, ELK Stack, New Relic, Datadog</p>
-        
-        <h3>Security:</h3>
-        <p>OAuth, JWT, OWASP, SSL, TLS, OpenID Connect</p>
-        
-        <h3>General Skills:</h3>
-        <p>SDK Development, Library Development, Third-Party Integration, Scalability, Cloud Architecture, Infrastructure as Code, Containerization, Monitoring, Logging, Agile Methodologies, Project Management, Jira, Trello, Asana, Collaboration Tools, Slack, Microsoft Teams, Version Control, Git, GitHub, GitLab, Unit Testing, Integration Testing, End-to-End Testing, API Management, API Gateway, Swagger, Data Processing, Load Balancing, Networking</p>
-    </div>
-</section>
+        <h2>Skills</h2>
+        <div class="skills-list">
+            <h3>Programming Languages and Frameworks:</h3>
+            <p>JavaScript, Java, Typescript, C++, C#, .NET, Kotlin, Swift, Objective-C, React Native</p>
+        </div>
+        <div class="skills-list">
+            <h3>Full-Stack Web Development:</h3>
+            <p>React.js, Angular.js, Node.js, Express.js, Next.js</p>
+        </div>
+        <div class="skills-list">
+            <h3>Mobile Development:</h3>
+            <p>Android SDK, iOS SDK, Kotlin, Swift, SwiftUI, Java, React Native, Objective-C, Xamarin</p>
+        </div>
+        <!-- Add more skills sections as needed -->
+    </section>
 
+ 
+    <!-- Contact -->
+    <section id="contact" class="container">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:neel77306@gmail.com">neel77306@gmail.com</a></p>
+        <p>Phone: +1 6478970169</p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Neel Patel</p>
+    </footer>
+
+</body>
+</html>
 
     <section class="project-section">
         <div class="container">
