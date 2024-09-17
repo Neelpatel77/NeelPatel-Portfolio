@@ -144,6 +144,34 @@ section h2 {
     font-size: 1rem;
     margin: 5px 0;
 }
+/* Skills Section */
+.skills-list {
+    margin-bottom: 20px;
+    padding: 10px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.skills-list:last-child {
+    border-bottom: none;
+}
+
+.skills-list h3 {
+    font-size: 1.3rem;
+    color: #004d40;
+    margin-bottom: 10px;
+}
+
+.skills-list p {
+    font-size: 1rem;
+    line-height: 1.6; /* For better readability */
+    margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+    .skills-list p {
+        font-size: 0.95rem; /* Adjust font size for smaller screens */
+    }
+}
 
 /* Projects Section */
 .project-grid {
