@@ -54,7 +54,8 @@ header p {
 
 /* Container Styling */
 .container {
-    width: 90%;
+    width: 100%; /* Full width on smaller screens */
+    max-width: 800px;
     margin: 0 auto;
     text-align: center;
     padding: 20px;
@@ -139,7 +140,7 @@ nav ul li a:hover {
 
 /* Section Styling */
 section {
-    padding: 50px 20px;
+    padding: 30px 20px;
     background-color: white;
     color: #004d40;
     margin: 20px 0;
@@ -166,17 +167,6 @@ section {
 .experience-item p, .skills-list p {
     font-size: 1.1rem;
     margin: 5px 0;
-}
-
-/* Skills Section */
-.skills-list {
-    margin-bottom: 20px;
-    padding: 15px;
-    border-bottom: 1px solid #e0e0e0;
-}
-
-.skills-list:last-child {
-    border-bottom: none;
 }
 
 /* Projects Section */
