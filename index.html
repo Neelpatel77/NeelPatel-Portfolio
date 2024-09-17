@@ -5,344 +5,116 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Neel Patel - Software Engineer</title>
+    <!-- Using MaterializeCSS for Modern UI components -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-
-    <style>
-        /* General Styles */
-        body {
-            font-family: 'Poppins', sans-serif;
-            background-color: #f8f9fa;
-            margin: 0;
-            padding: 0;
-            scroll-behavior: smooth;
-            transition: all 0.3s ease;
-        }
-
-        header {
-            background: url('hero-background.jpg') center/cover no-repeat;
-            text-align: center;
-            color: white;
-            padding: 80px 20px;
-            position: relative;
-        }
-
-        header::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.5);
-        }
-
-        header div {
-            position: relative;
-            z-index: 1;
-        }
-
-        h1 {
-            font-size: 2.5rem;
-        }
-
-        p {
-            font-size: 1.1rem;
-            margin: 10px 0;
-        }
-
-        nav {
-            background-color: #343a40;
-            padding: 15px 0;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-        nav ul {
-            list-style: none;
-            text-align: center;
-            margin: 0;
-            padding: 0;
-        }
-
-        nav ul li {
-            display: inline-block;
-            margin: 0 20px;
-        }
-
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-weight: 600;
-        }
-
-        nav ul li a:hover,
-        nav ul li a.active {
-            color: #00b4d8;
-        }
-
-        /* Smooth scrolling effect */
-        html {
-            scroll-behavior: smooth;
-        }
-
-        /* Social Links */
-        .social-links {
-            text-align: center;
-            padding: 20px;
-        }
-
-        .social-link {
-            text-decoration: none;
-            margin: 0 15px;
-            display: inline-block;
-            color: #343a40;
-        }
-
-        .social-icon {
-            width: 30px;
-            vertical-align: middle;
-            margin-right: 10px;
-        }
-
-        /* Education, Experience & Skills Section */
-        section {
-            padding: 60px 20px;
-            text-align: center;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: auto;
-        }
-
-        h2 {
-            font-size: 2rem;
-            margin-bottom: 40px;
-            position: relative;
-        }
-
-        h2::after {
-            content: '';
-            width: 50px;
-            height: 3px;
-            background-color: #00b4d8;
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-
-        .education-item,
-        .experience-item,
-        .skills-list {
-            margin-bottom: 40px;
-        }
-
-        .skills-list h3 {
-            font-weight: 600;
-        }
-
-        /* Project Section */
-        .project-section {
-            padding: 60px 20px;
-            background-color: #f4f4f4;
-        }
-
-        .project-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-        }
-
-        .project-card {
-            background-color: #ffffff;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-            cursor: pointer;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            padding: 20px;
-        }
-
-        .project-card:hover {
-            transform: scale(1.05);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-        }
-
-        .project-card img {
-            width: 100%;
-            height: auto;
-            object-fit: cover;
-        }
-
-        .project-card h3 {
-            font-size: 1.2em;
-            margin: 15px 0;
-        }
-
-        .project-card p {
-            font-size: 1em;
-            margin: 10px;
-            color: #666;
-        }
-
-        /* Footer */
-        footer {
-            background-color: #343a40;
-            color: white;
-            text-align: center;
-            padding: 20px 0;
-        }
-
-        footer p {
-            margin: 0;
-        }
-
-        @media (max-width: 768px) {
-            .project-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+<link rel="stylesheet" href="style.css"> </link>
+    
 </head>
 
 <body>
 
+    <!-- Navbar with Dark Mode Toggle -->
+    <nav>
+        <div class="nav-wrapper">
+            <a href="#" class="brand-logo center">Neel Patel</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="#summary">Summary</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#" id="dark-mode-toggle"><i class="fas fa-moon"></i></a></li>
+            </ul>
+        </div>
+    </nav>
+
     <header>
         <div>
-            <img src="Neel Patel Picture.jpeg" alt="Neel Patel" style="border-radius: 50%; width: 150px;">
+            <img src="Neel_Patel.jpg" alt="Neel Patel" style="border-radius: 50%; width: 150px;">
             <h1>Neel Patel</h1>
-            <p>Software Engineer, Problem Solver, Innovator, Quick Learner</p>
-            <p>+1 6478970169</p>
-            <p>neel77306@gmail.com</p>
+            <p>Software Engineer | Problem Solver | Innovator</p>
+            <a href="#contact" class="btn waves-effect waves-light">Contact Me</a>
         </div>
     </header>
 
-    <section class="social-links">
-        <a href="https://www.linkedin.com/in/neel-patel-90448b17a/" class="social-link">
-            <img src="https://i.ibb.co/9n8kTnQ/LinkedIn.png" alt="LinkedIn" class="social-icon" /> LinkedIn
-        </a>
-        <a href="https://github.com/Neelpatel77" class="social-link">
-            <img src="https://i.ibb.co/SNyLsCR/GitHub.png" alt="GitHub" class="social-icon" /> GitHub
-        </a>
+    <section id="summary" class="container">
+        <h2 class="section-title">Summary</h2>
+        <p>
+            I am a Software Engineer with over 5 years of experience specializing in software development and DevOps. I have a proven track record in designing and developing high-performance, scalable solutions using AWS, GCP, and modern JavaScript frameworks. I'm passionate about creating efficient and reliable systems that solve real-world problems.
+        </p>
     </section>
 
-    <nav>
-        <ul>
-            <li><a href="#education" class="active">Education</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="Contact.html">Contact</a></li>
+    <section id="experience" class="container">
+        <h2 class="section-title">Experience</h2>
+        <ul class="collection">
+            <li class="collection-item avatar">
+                <i class="fas fa-briefcase circle teal"></i>
+                <span class="title">DevOps/Software Engineer, HCL Technology (Remote)</span>
+                <p>May 2023 - May 2024</p>
+                <ul>
+                    <li>Led API architecture development integrating 10+ third-party services, improving performance by 30%.</li>
+                    <li>Deployed microservices on GCP with Kubernetes and Terraform, enhancing scalability by 40%.</li>
+                </ul>
+            </li>
+            <li class="collection-item avatar">
+                <i class="fas fa-briefcase circle teal"></i>
+                <span class="title">Software Engineer, zCon Solutions</span>
+                <p>Jun 2022 - Jan 2023</p>
+                <ul>
+                    <li>Led backend development with C#, .NET, and Node.js, improving development time by 20%.</li>
+                </ul>
+            </li>
         </ul>
-    </nav>
-
-    <!-- Summary Section -->
-    <section id="summary">
-        <div class="container">
-            <h2>Summary</h2>
-            <p>Experienced Software Engineer with over 5+ years specializing in software development and DevOps. Proven track record in developing high-performance, scalable solutions using AWS, GCP, and modern JavaScript frameworks. Strong focus on optimizing system reliability and enhancing user engagement. Looking to leverage expertise in cloud infrastructure and full-stack development to drive innovative solutions.</p>
-        </div>
     </section>
 
-    <!-- Experience Section -->
-    <section id="experience">
-        <div class="container">
-            <h2>Experience</h2>
-            <div class="experience-item">
-                <h3>DevOps/Software Engineer, HCL Technology (Remote)</h3>
-                <p>[May’2023-May’2024]</p>
-                <ul>
-                    <li>Led the development of a high-performance API architecture, integrating with over 10 third-party services, improving request handling speed by 30%.</li>
-                    <li>Optimized applications with React.js, Next.js, Node.js, reducing page load times by 40%.</li>
-                    <li>Deployed microservices on Google Cloud Platform with Kubernetes, improving scalability by 40%.</li>
-                </ul>
-            </div>
-
-            <div class="experience-item">
-                <h3>Software Engineer, zCon Solutions Pvt. Ltd.</h3>
-                <p>[Jun‘2022-Jan’2023]</p>
-                <ul>
-                    <li>Led backend development using C#, .NET, and Node.js, decreasing development time by 20%.</li>
-                    <li>Developed APIs and microservices integration, improving uptime by 35%.</li>
-                </ul>
-            </div>
-
-            <div class="experience-item">
-                <h3>Software Engineer, Cognizant (Hybrid)</h3>
-                <p>[Jan‘2021-Mar’2022]</p>
-                <ul>
-                    <li>Designed scalable applications with Node.js, React.js, and Angular.js.</li>
-                    <li>Deployed on AWS and Google Cloud services, reducing infrastructure costs by 40%.</li>
-                </ul>
-            </div>
-
-            <div class="experience-item">
-                <h3>Software Engineer, L&T Infotech (LTI)</h3>
-                <p>[Mar‘2019-Jul’2020]</p>
-                <ul>
-                    <li>Developed and maintained full-stack applications using Django and Flask.</li>
-                    <li>Managed AWS infrastructure, optimizing scalability and cost-efficiency.</li>
-                </ul>
-            </div>
-        </div>
+    <section id="skills" class="container">
+        <h2 class="section-title">Skills</h2>
+        <ul>
+            <li><strong>Programming Languages:</strong> JavaScript, TypeScript, C++, C#, .NET, Kotlin, Swift</li>
+            <li><strong>DevOps & Deployment:</strong> AWS, Docker, GCP, Kubernetes, Jenkins, Terraform</li>
+            <li><strong>Mobile Development:</strong> Android SDK, iOS SDK, SwiftUI, Kotlin, React Native</li>
+        </ul>
     </section>
 
-    <!-- Education Section -->
-    <section id="education">
-        <div class="container">
-            <h2>Education</h2>
-            <div class="education-item">
-                <h3>Post Graduate Certificate in Mobile Application Development</h3>
-                <p>Fanshawe College, London, ON | 3.92/4.2 GPA</p>
-            </div>
-            <div class="education-item">
-                <h3>Bachelor of Engineering (B.Eng.) in Computer Science Engineering</h3>
-                <p>Gujarat Technological University, Ahmedabad, India | 8.33/10.00 CGPA</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills">
-        <div class="container">
-            <h2>Skills</h2>
-            <div class="skills-list">
-                <h3>Programming Languages:</h3>
-                <p>JavaScript, Java, Typescript, C++, C#, .NET, Kotlin, Swift, Objective-C</p>
-            </div>
-            <div class="skills-list">
-                <h3>Full-Stack Web Development:</h3>
-                <p>React.js, Angular.js, Node.js, Express.js, Next.js</p>
-            </div>
-            <div class="skills-list">
-                <h3>DevOps & Deployment:</h3>
-                <p>AWS, Azure, Docker, GCP, Kubernetes, Jenkins, GitLab CI, Terraform, Ansible</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Project Section -->
-    <section class="project-section" id="projects">
-        <div class="container">
-            <h2>Projects</h2>
-            <div class="project-grid">
-                <div class="project-card" onclick="window.open('https://clipchamp.com/watch/vyPYqVLATRR', '_blank')">
-                    <img src="ReactNative.png" alt="FitLit Pro">
-                    <h3>Ardeor - E-Commerce Platform</h3>
-                    <p>Founded and developed Ardeor, an e-commerce platform using Node.js, Firebase, and Stripe API Gateway. Deployed on AWS with Kubernetes for high availability.</p>
-                </div>
-                <div class="project-card" onclick="window.open('https://github.com/GeoConnect', '_blank')">
-                    <img src="Android.png" alt="GeoConnect">
-                    <h3>GeoConnect - Real-Time Location Tracking</h3>
-                    <p>Android app for real-time location tracking using Google SDK and IP-based search with privacy control.</p>
+    <section id="projects" class="container">
+        <h2 class="section-title">Projects</h2>
+        <div class="row">
+            <div class="col s12 m6">
+                <div class="card project-card">
+                    <div class="card-image">
+                        <img src="Ardeor_project.jpg">
+                    </div>
+                    <div class="card-content">
+                        <h3>Ardeor - E-Commerce Platform</h3>
+                        <p>Developed an e-commerce platform using Node.js, Firebase, and AWS with Kubernetes for high availability.</p>
+                    </div>
                 </div>
             </div>
+            <div class="col s12 m6">
+                <div class="card project-card">
+                    <div class="card-image">
+                        <img src="GeoConnect_project.jpg">
+                    </div>
+                    <div class="card-content">
+                        <h3>GeoConnect - Real-Time Location Tracking</h3>
+                        <p>Developed an Android app using Google SDK for real-time location tracking and nearby searches.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="container">
+        <h2 class="section-title">Contact</h2>
+        <p>Email: <a href="mailto:neel77306@gmail.com">neel77306@gmail.com</a></p>
+        <p>Phone: +1 6478970169</p>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/neel-patel-90448b17a/"><i class="fab fa-linkedin fa-2x"></i></a>
+            <a href="https://github.com/Neelpatel77"><i class="fab fa-github fa-2x"></i></a>
         </div>
     </section>
 
@@ -350,6 +122,18 @@
         <p>&copy; 2024 Neel Patel</p>
     </footer>
 
+    <!-- Materialize JS for interactive components -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!-- Dark Mode Toggle Script -->
+    <script>
+        const toggleButton = document.getElementById('dark-mode-toggle');
+        const body = document.body;
+
+        toggleButton.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            toggleButton.innerHTML = body.classList.contains('dark-mode') ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+        });
+    </script>
 </body>
 
 </html>
