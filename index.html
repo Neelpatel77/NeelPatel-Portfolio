@@ -1,430 +1,313 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Neel Patel - Software Engineer</title>
-    <!-- Using MaterializeCSS for Modern UI components -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <!-- Font Awesome for Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
-<link rel="stylesheet" href="style.css"> </link>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
 
     <style>
-                body {
-            font-family: 'Poppins', sans-serif;
-            background-color: #f5f5f5;
-            transition: background-color 0.3s ease, color 0.3s ease;
-        }
-
-        header {
-            background: url('hero-background.jpg') center/cover no-repeat;
-            height: 100vh;
-            color: white;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            animation: fadeIn 1.5s ease;
-        }
-
-        header h1 {
-            font-size: 4rem;
-            margin: 0;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-
-        header p {
-            font-size: 1.2rem;
-            margin: 10px 0;
-            letter-spacing: 1px;
-        }
-
-        /* Navbar Styling */
-        nav {
-            background-color: #004d40;
-        }
-
-        nav ul li a {
-            color: white;
-            font-weight: bold;
-        }
-
-        /* Hero Section Animation */
-        @keyframes fadeIn {
-            0% {
-                opacity: 0;
-                transform: translateY(50px);
-            }
-
-            100% {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* Haptic Feedback and Animation */
-        .btn:hover {
-            transform: scale(1.05);
-            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
-        }
-
-        .btn {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        /* Dark Mode Toggle */
-        .dark-mode {
-            background-color: #121212;
-            color: white;
-        }
-
-        .section-title {
-            font-size: 2.5rem;
-            text-align: center;
-            margin-bottom: 30px;
-        }
-
-        .container {
+        .project-section {
             padding: 20px;
+            background-color: #f4f4f4;
+        }
+.bg{
+    background-color: "blue";
+}
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 0 20px;
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
         }
 
         .project-card {
-            transition: all 0.3s ease;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
         }
 
         .project-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
         }
 
-        footer {
-            background-color: #004d40;
-            color: white;
-            text-align: center;
-            padding: 20px 0;
+        .project-card img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
         }
 
-        .social-links {
-            padding: 20px;
-            text-align: center;
+        .project-card h3 {
+            font-size: 1.1em;
+            margin: 10px;
         }
 
-        .social-links a {
-            margin: 0 10px;
-            color: #004d40;
+        .project-card p {
+            font-size: 0.9em;
+            margin: 10px;
+            color: #666;
         }
 
-        .dark-mode .social-links a {
-            color: white;
+        @media (max-width: 768px) {
+            .project-grid {
+                grid-template-columns: 1fr;
+            }
         }
-
-        .dark-mode .btn {
-            background-color: #1a237e;
-        }
-/* General Body Styling */
-body {
-    font-family: 'Poppins', sans-serif;
-    background-color: #f5f5f5;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    overflow-x: hidden;
-}
-
-header {
-    background: url('hero-background.jpg') center/cover no-repeat;
-    height: 100vh;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    animation: fadeIn 1.5s ease;
-}
-
-header h1 {
-    font-size: 4rem;
-    margin: 0;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
-
-header p {
-    font-size: 1.2rem;
-    margin: 10px 0;
-    letter-spacing: 1px;
-}
-
-/* Navbar Styling */
-nav {
-    background-color: #004d40;
-}
-
-nav ul li a {
-    color: white;
-    font-weight: bold;
-    transition: color 0.3s ease;
-}
-
-nav ul li a:hover {
-    color: #00e676;
-}
-
-/* Smooth Animations */
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-        transform: translateY(50px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes slideIn {
-    0% {
-        opacity: 0;
-        transform: translateX(-100px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-@keyframes slideUp {
-    0% {
-        opacity: 0;
-        transform: translateY(50px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Hero Section Animation */
-.btn:hover {
-    transform: scale(1.1);
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
-    background-color: #00796b !important;
-}
-
-.btn {
-    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
-}
-
-/* Dark Mode Toggle */
-.dark-mode {
-    background-color: #121212;
-    color: white;
-    transition: background-color 0.5s ease, color 0.5s ease;
-}
-
-.dark-mode nav {
-    background-color: #1a237e;
-}
-
-.dark-mode .btn {
-    background-color: #1a237e;
-}
-
-/* Section Title */
-.section-title {
-    font-size: 2.5rem;
-    text-align: center;
-    margin-bottom: 30px;
-    animation: slideIn 1s ease;
-}
-
-/* Container Styling */
-.container {
-    padding: 20px;
-    opacity: 0;
-    animation: slideUp 1.2s forwards ease-in-out;
-}
-
-/* Project Card Animations */
-.project-card {
-    transition: all 0.3s ease;
-    transform: perspective(1px) translateZ(0);
-    backface-visibility: hidden;
-    position: relative;
-}
-
-.project-card:hover {
-    transform: translateY(-10px) scale(1.02);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-}
-
-.project-card img {
-    transition: transform 0.3s ease;
-}
-
-.project-card:hover img {
-    transform: scale(1.1);
-}
-
-/* Footer */
-footer {
-    background-color: #004d40;
-    color: white;
-    text-align: center;
-    padding: 20px 0;
-}
-
-.social-links {
-    padding: 20px;
-    text-align: center;
-}
-
-.social-links a {
-    margin: 0 10px;
-    color: #004d40;
-    transition: transform 0.3s ease;
-}
-
-.social-links a:hover {
-    color: #00e676;
-    transform: scale(1.2);
-}
-
-.dark-mode .social-links a {
-    color: white;
-}
-
-.dark-mode .social-links a:hover {
-    color: #00e676;
-}
     </style>
-    
-</head>
 
+</head>
 <body>
 
-    <!-- Navbar with Dark Mode Toggle -->
+    <header>
+        <div>
+            <img src="Neel Patel Picture.jpeg" alt="Neel Patel">
+            <h1>Neel Patel</h1>
+            <p>Software Engineer, Problem Solver, Innovator, Quick Learner</p>
+            <p>+1 6478970169</p>
+            <p>neel77306@gmail.com</p>
+        </div>
+    </header>
+
+    <section class="social-links">
+        <a href="https://www.linkedin.com/in/neel-patel-90448b17a/" class="social-link">
+            <img src="https://i.ibb.co/9n8kTnQ/LinkedIn.png" alt="LinkedIn" class="social-icon"/> LinkedIn
+        </a>
+        <a href="https://github.com/Neelpatel77" class="social-link">
+            <img src="https://i.ibb.co/SNyLsCR/GitHub.png" alt="GitHub" class="social-icon"/> GitHub
+        </a>
+    </section>
+    
+ 
     <nav>
-        <div class="nav-wrapper">
-            <a href="#" class="brand-logo center">Neel Patel</a>
-            <ul id="nav-mobile" class="right hide-on-med-and-down">
-                <li><a href="#summary">Summary</a></li>
+        <div>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#education">Education</a></li>
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="#" id="dark-mode-toggle"><i class="fas fa-moon"></i></a></li>
+                <li class="bg"><a href="Contact.html" class="bg">Contact</a></li>
             </ul>
         </div>
     </nav>
 
-    <header>
-        <div>
-            <img src="Neel_Patel.jpg" alt="Neel Patel" style="border-radius: 50%; width: 150px;">
-            <h1>Neel Patel</h1>
-            <p>Software Engineer | Problem Solver | Innovator</p>
-            <a href="#contact" class="btn waves-effect waves-light">Contact Me</a>
-        </div>
-    </header>
 
-    <section id="summary" class="container">
-        <h2 class="section-title">Summary</h2>
-        <p>
-            I am a Software Engineer with over 5 years of experience specializing in software development and DevOps. I have a proven track record in designing and developing high-performance, scalable solutions using AWS, GCP, and modern JavaScript frameworks. I'm passionate about creating efficient and reliable systems that solve real-world problems.
-        </p>
-    </section>
-
-    <section id="experience" class="container">
-        <h2 class="section-title">Experience</h2>
-        <ul class="collection">
-            <li class="collection-item avatar">
-                <i class="fas fa-briefcase circle teal"></i>
-                <span class="title">DevOps/Software Engineer, HCL Technology (Remote)</span>
-                <p>May 2023 - May 2024</p>
-                <ul>
-                    <li>Led API architecture development integrating 10+ third-party services, improving performance by 30%.</li>
-                    <li>Deployed microservices on GCP with Kubernetes and Terraform, enhancing scalability by 40%.</li>
-                </ul>
-            </li>
-            <li class="collection-item avatar">
-                <i class="fas fa-briefcase circle teal"></i>
-                <span class="title">Software Engineer, zCon Solutions</span>
-                <p>Jun 2022 - Jan 2023</p>
-                <ul>
-                    <li>Led backend development with C#, .NET, and Node.js, improving development time by 20%.</li>
-                </ul>
-            </li>
-        </ul>
-    </section>
-
-    <section id="skills" class="container">
-        <h2 class="section-title">Skills</h2>
-        <ul>
-            <li><strong>Programming Languages:</strong> JavaScript, TypeScript, C++, C#, .NET, Kotlin, Swift</li>
-            <li><strong>DevOps & Deployment:</strong> AWS, Docker, GCP, Kubernetes, Jenkins, Terraform</li>
-            <li><strong>Mobile Development:</strong> Android SDK, iOS SDK, SwiftUI, Kotlin, React Native</li>
-        </ul>
-    </section>
-
-    <section id="projects" class="container">
-        <h2 class="section-title">Projects</h2>
-        <div class="row">
-            <div class="col s12 m6">
-                <div class="card project-card">
-                    <div class="card-image">
-                        <img src="Ardeor_project.jpg">
-                    </div>
-                    <div class="card-content">
-                        <h3>Ardeor - E-Commerce Platform</h3>
-                        <p>Developed an e-commerce platform using Node.js, Firebase, and AWS with Kubernetes for high availability.</p>
-                    </div>
+    <section id="education">
+        <div class="container">
+            <h2>Education</h2>
+            <div class="education-items">
+                <!-- Education Item 1 -->
+                <div class="education-item">
+                    <h3>Post Graduation in Mobile Application Development</h3>
+<!--                     <p>[Jan’2023 – Apr’2024]</p> -->
+                    <p>Fanshawe College | London, Ontario, Canada</p>
+                    <p>GPA: 3.90/4.20</p>
                 </div>
-            </div>
-            <div class="col s12 m6">
-                <div class="card project-card">
-                    <div class="card-image">
-                        <img src="GeoConnect_project.jpg">
-                    </div>
-                    <div class="card-content">
-                        <h3>GeoConnect - Real-Time Location Tracking</h3>
-                        <p>Developed an Android app using Google SDK for real-time location tracking and nearby searches.</p>
-                    </div>
+                
+                <!-- Education Item 2 -->
+                <div class="education-item">
+                    <h3>Bachelors Degree in Computer Engineering (B.Eng.)</h3>
+<!--                     <p>[May’2018 – May’2022]</p> -->
+                    <p>Gujarat Technological University | Ahmedabad, Gujarat, India</p>
+                    <p>CGPA: 8.33/10.00</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="contact" class="container">
-        <h2 class="section-title">Contact</h2>
-        <p>Email: <a href="mailto:neel77306@gmail.com">neel77306@gmail.com</a></p>
-        <p>Phone: +1 6478970169</p>
-        <div class="social-links">
-            <a href="https://www.linkedin.com/in/neel-patel-90448b17a/"><i class="fab fa-linkedin fa-2x"></i></a>
-            <a href="https://github.com/Neelpatel77"><i class="fab fa-github fa-2x"></i></a>
+  
+    <!-- Experience Section -->
+    <section id="experience">
+        <div class="container">
+            <h2>Experience</h2>
+            <div class="experience-items">
+                <!-- Experience Item 1 -->
+                <div class="experience-item">
+                    <h3>DevOps/Software Engineer</h3>
+                   
+                    <p>Ardeor</p>
+                </div>
+
+                <!-- Experience Item 2 -->
+                <div class="experience-item">
+                    <h3>Software Developer</h3>
+                    <p>zCon Solutions Pvt. Ltd. Pune, India</p>
+                </div>
+
+                <!-- Additional experience items -->
+                <div class="experience-item">
+                    <h3>Software Engineer</h3>
+                    <p>Suven Consultancy & Technology Pvt. Ltd., Mumbai</p>
+                </div>
+                <div class="experience-item">
+                    <h3>Software Engineer</h3>
+                    <p>Einfochips, Ahmedabad</p>
+                </div>
+            </div>
         </div>
     </section>
 
+
+
+    <section id="skills">
+        <div class="container">
+            <h2>Skills</h2>
+            
+            <!-- Skills List -->
+            <div class="skills-list">
+                <h3>Programming Languages:</h3>
+                <p>Kotlin, Swift, Java, JavaScript, Python, C++, C</p>
+            </div>
+            
+            <!-- Android Development -->
+            <div class="skills-list">
+                <h3>Android Development:</h3>
+                <p>Modern Android App Architectures, RESTful API Integration, Networking and Data Management, Expertise in Kotlin, Dependency Injection, Performance Optimization, UI/UX and Animations, Mobile App Security, Software Testing, Google Map Integration, Expertise with Android Studio Debug, Clean Architecture, Google Play Store Deployment</p>
+            </div>
+            
+            <!-- iOS Development -->
+            <div class="skills-list">
+                <h3>iOS Development:</h3>
+                <p>SwiftUI, RESTful API Integration, UI/UX Development, Networking and Data Management, Advanced Frameworks and Features, Performance Optimization, UIKit Dynamics, Core Location, Testing and Debugging, Apple App Store Deployment</p>
+            </div>
+            
+            <!-- Data Structures and Algorithm -->
+            <div class="skills-list">
+                <h3>Data Structures and Algorithm:</h3>
+                <p>Trees, Graphs, Linked List, Hash, Greedy Algorithms, Dynamic Programming, Knapsack Problem, Longest Common Subsequence, Matrix Multiplication Algorithm, NP Hard Problem-solving, NP complete Problem-Solving, Sorting and Searching Algorithm, Time and Space complexity</p>
+            </div>
+            
+            <!-- DevOps & Deployment -->
+            <div class="skills-list">
+                <h3>DevOps & Deployment:</h3>
+                <p>Infrastructure as Code (Terraform), CI/CD Tools (Jenkins, Travis CI), DevOps Practices</p>
+            </div>
+            
+            <!-- Software Development Methodologies -->
+            <div class="skills-list">
+                <h3>Software Development Methodologies:</h3>
+                <p>Agile Methodologies (Scrum), Test-Driven Development (TDD), Continuous Integration, Continuous Deployment (CI/CD), Waterfall Methodology</p>
+            </div>
+            
+            <!-- Web Development -->
+            <div class="skills-list">
+                <h3>Web Development:</h3>
+                <p>React.js, Node.js, Angular.js, TypeScript, HTML5, CSS, Material UI, Material Theme, Responsive Web Design, Progressive Web Apps (PWAs), Single Page Applications (SPAs), Front-End Testing (Jest, Enzyme)</p>
+            </div>
+            
+            <!-- Back-End Development and Database -->
+            <div class="skills-list">
+                <h3>Back-End Development and Database:</h3>
+                <p>Authentication and Authorization Systems (JWT, OAuth), GraphQL Server Implementations, RESTful API Design Best Practices, Database Scaling and Optimization, Serverless Computing (AWS Lambda, Azure Functions), Docker Deployment, Firebase Database, NoSQL Databases (MongoDB, Cassandra), Data Modeling, Oracle, SQL, MySQL Databases, Automated Testing Frameworks, Apache Tomcat Server, Node.js Web Server, Virtualization</p>
+            </div>
+            
+            <!-- Computer Science & Mathematics -->
+            <div class="skills-list">
+                <h3>Computer Science & Mathematics:</h3>
+                <p>Data Structures, Algorithm Development, Object-Oriented Programming, Operating Systems, Calculus, Linear Algebra</p>
+            </div>
+            
+            <!-- Interpersonal Skills -->
+            <div class="skills-list">
+                <h3>Interpersonal Skills:</h3>
+                <p>Leadership, Analytical, Innovative, Results-Oriented, Tech-Savvy, Adaptable, Problem-Solving, Goal-Driven, Self-Motivated, Adaptable, Deadline-Focused, Proactive, Detail-Oriented, Multitasking, Resourceful</p>
+            </div>
+        </div>
+    </section>
+    
+
+    <section class="project-section">
+        <div class="container">
+            <div class="project-grid">
+                <!-- Repeat the following block for each project card (total 9 cards) -->
+                <!-- Project Card 1 -->
+                <div class="project-card" onclick="window.open('https://www.youtube.com/watch?v=UWvZlsfw-i8', '_blank')">
+                    <img src="ReactNative.png" alt="Project 1 Thumbnail">
+                    <h3>FitLit Pro</h3>
+                    <p>A Complete Fitness App to store data on cloud and used modern app development</p>
+                </div>
+    <!-- Project Card 2 -->
+<div class="project-card" onclick="window.open('https://www.youtube.com/watch?v=3k4SxvNLQW0', '_blank')">
+    <img src="iOS.png" alt="Project 2 Thumbnail">
+    <h3>iOS SwiftUI with RestAPI and MVVM</h3>
+    <p>iOS SwiftUI with RestAPI and MVVM</p>
+</div>
+
+<!-- Project Card 3 -->
+<div class="project-card" onclick="window.open('https://www.youtube.com/watch?v=2iVZQ_NQ4kc', '_blank')">
+    <img src="iOS.png" alt="Project 3 Thumbnail">
+    <h3>iOS Contact App</h3>
+    <p>Used SwiftUI and RestAPI to load and show user data</p>
+</div>
+
+<!-- Project Card 4 -->
+<div class="project-card" onclick="window.open('https://www.youtube.com/watch?v=VLxZroSul_w', '_blank')">
+    <img src="Android.png" alt="Project 4 Thumbnail">
+    <h3>Google Map Kit with Kotlin</h3>
+    <p>Modern Kotlin App development in Android with Google Maps Kit and sharing realtime location and near by places in recycler view</p>
+</div>
+
+<!-- Project Card 5 -->
+<div class="project-card" onclick="window.open('https://youtu.be/wdTIMkyWw8Q', '_blank')">
+    <img src="iOS.png" alt="Project 5 Thumbnail">
+    <h3>iOS Weather App</h3>
+    <p>Weather App in iOS with user API validation</p>
+</div>
+
+<!-- Project Card 6 -->
+<div class="project-card" onclick="window.open('https://www.youtube.com/watch?v=uCvjJE39bXo', '_blank')">
+    <img src="Web.png" alt="Project 6 Thumbnail">
+    <h3>Joke Verse APP</h3>
+    <p>A joke App which build with the modern PWA technicques and modern web libraries</p>
+</div>
+
+<!-- Project Card 7 -->
+<div class="project-card" onclick="window.open('https://www.youtube.com/watch?v=IP-qFoKGQX0&ab_channel=NeelPatel', '_blank')">
+    <img src="ReactNative.png" alt="Project 7 Thumbnail">
+    <h3>Todo List - ReactNative CLI</h3>
+    <p>Cross-Platform App Development</p>
+</div>
+
+<!-- Project Card 8 -->
+<div class="project-card" onclick="window.open('https://www.youtube.com/watch?v=SZ2YskuPESo', '_blank')">
+    <img src="Web.png" alt="Project 8 Thumbnail">
+    <h3>Server and API Generator</h3>
+    <p>Express.js Server, Postman API testing and Docker Container</p>
+</div>
+
+<!-- Project Card 9 -->
+<div class="project-card" onclick="window.open('https://clipchamp.com/watch/mNTa2zAhtLw', '_blank')">
+    <img src="ReactNative.png" alt="Project 9 Thumbnail">
+    <h3>Music Playlist App</h3>
+    <p>Cross-Platform Music playlist APP</p>
+</div>
+
+<!-- <div>
+
+    <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FPKHwkuEY3ZHJiBOrQ88Zew%2FUntitled%3Ftype%3Ddesign%26node-id%3D1%253A2%26mode%3Ddesign%26t%3DefRM5JwiMaAhQyLL-1" allowfullscreen></iframe>
+</div> -->
+</div>
+</div>
+</section>  
+
+ 
     <footer>
         <p>&copy; 2024 Neel Patel</p>
     </footer>
 
-    <!-- Materialize JS for interactive components -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <!-- Dark Mode Toggle Script -->
-    <script>
-        const toggleButton = document.getElementById('dark-mode-toggle');
-        const body = document.body;
-
-        toggleButton.addEventListener('click', () => {
-            body.classList.toggle('dark-mode');
-            toggleButton.innerHTML = body.classList.contains('dark-mode') ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
-        });
-    </script>
 </body>
-
 </html>
