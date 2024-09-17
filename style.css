@@ -5,6 +5,9 @@ body {
     padding: 0;
     background-color: #f4f4f4;
     background-image: linear-gradient(180deg, #2d2d2d, #004d40); /* Heroic background */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
     color: #ffffff;
 }
 
@@ -24,80 +27,32 @@ header {
 }
 
 header img {
-    width: 120px;
-    height: 120px;
+    width: 100px; /* Adjusted size for mobile */
+    height: 100px;
     border-radius: 50%;
-    border: 4px solid #00e676; /* Futuristic glowing effect */
+    border: 4px solid #00e676;
 }
 
 header h1 {
     margin-top: 20px;
-    font-size: 30px;
+    font-size: 24px;
     font-weight: bold;
-    letter-spacing: 3px; /* Strong, bold feel */
+    letter-spacing: 2px;
     text-transform: uppercase;
 }
 
 header p {
     margin: 10px;
-    font-size: 18px;
-}
-
-/* Parallax Background */
-.parallax {
-    background: url('heroic-background.jpg') no-repeat fixed;
-    background-size: cover;
-    height: 400px;
-    position: relative;
-    z-index: 1;
+    font-size: 14px;
 }
 
 /* Container Styling */
 .container {
     width: 100%; /* Full width on smaller screens */
-    max-width: 800px;
+    max-width: 100%; /* No max width for mobile */
     margin: 0 auto;
     text-align: center;
     padding: 20px;
-}
-
-/* Typography */
-h2 {
-    font-size: 24px;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-    color: #00e676;
-    letter-spacing: 2px;
-    border-bottom: 2px solid #00e676;
-    display: inline-block;
-}
-
-h3 {
-    font-size: 1.5rem;
-    margin-bottom: 15px;
-    color: #ffffff;
-}
-
-p {
-    font-size: 1.2rem;
-    margin-bottom: 15px;
-}
-
-/* Social Links */
-.social-links {
-    text-align: center;
-    margin-top: 15px;
-}
-
-.social-links a {
-    margin: 0 8px;
-    color: #00e676;
-    transition: transform 0.3s ease, color 0.3s;
-}
-
-.social-links a:hover {
-    transform: scale(1.2);
-    color: #004d40;
 }
 
 /* Navbar Styling */
@@ -108,7 +63,7 @@ nav {
     position: sticky;
     top: 0;
     z-index: 1000;
-    backdrop-filter: blur(10px); /* Sleek futuristic backdrop effect */
+    width: 100%;
 }
 
 nav ul {
@@ -138,15 +93,25 @@ nav ul li a:hover {
     border-radius: 5px;
 }
 
+/* Parallax Background */
+.parallax {
+    background: url('heroic-background.jpg') no-repeat fixed;
+    background-size: cover;
+    height: 400px;
+    position: relative;
+    z-index: 1;
+}
+
 /* Section Styling */
 section {
-    padding: 30px 20px;
+    padding: 30px 10px;
     background-color: white;
     color: #004d40;
     margin: 20px 0;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     border-radius: 10px;
     animation: fadeInUp 0.7s ease-out forwards;
+    max-width: 100%;
 }
 
 /* Experience and Skills Styling */
@@ -160,12 +125,12 @@ section {
 }
 
 .experience-item h3, .skills-list h3 {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     color: #00e676;
 }
 
 .experience-item p, .skills-list p {
-    font-size: 1.1rem;
+    font-size: 1rem;
     margin: 5px 0;
 }
 
@@ -195,7 +160,7 @@ section {
 .project-card h3 {
     text-align: center;
     padding: 10px;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     color: #004d40;
 }
 
