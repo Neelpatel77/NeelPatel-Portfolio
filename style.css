@@ -4,6 +4,8 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
+    background-image: linear-gradient(180deg, #2d2d2d, #004d40); /* Heroic background */
+    color: #ffffff;
 }
 
 /* Smooth Scrolling Effect */
@@ -14,48 +16,69 @@ html {
 /* Header Styling */
 header {
     text-align: center;
-    padding: 20px;
-    background-color: #fff;
+    padding: 40px 20px;
+    background-color: transparent;
+    color: #00e676;
+    position: relative;
+    z-index: 2;
 }
 
 header img {
-    width: 120px; /* Mobile-first size */
+    width: 120px;
     height: 120px;
     border-radius: 50%;
+    border: 4px solid #00e676; /* Futuristic glowing effect */
 }
 
 header h1 {
-    margin-top: 10px;
-    font-size: 22px; /* Smaller for mobile */
+    margin-top: 20px;
+    font-size: 30px;
     font-weight: bold;
+    letter-spacing: 3px; /* Strong, bold feel */
+    text-transform: uppercase;
 }
 
 header p {
-    margin: 5px;
-    font-size: 14px; /* Smaller for mobile */
+    margin: 10px;
+    font-size: 18px;
+}
+
+/* Parallax Background */
+.parallax {
+    background: url('heroic-background.jpg') no-repeat fixed;
+    background-size: cover;
+    height: 400px;
+    position: relative;
+    z-index: 1;
 }
 
 /* Container Styling */
 .container {
-    width: 90%; /* Full width on smaller screens */
+    width: 90%;
     margin: 0 auto;
     text-align: center;
-    padding: 15px;
+    padding: 20px;
 }
 
 /* Typography */
 h2 {
-    font-size: 20px; /* Mobile-first size */
-    margin-bottom: 15px;
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    color: #00e676;
+    letter-spacing: 2px;
+    border-bottom: 2px solid #00e676;
+    display: inline-block;
 }
 
 h3 {
-    font-size: 1.2em;
-    margin-bottom: 10px;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #ffffff;
 }
 
 p {
-    font-size: 1em;
+    font-size: 1.2rem;
     margin-bottom: 15px;
 }
 
@@ -67,22 +90,24 @@ p {
 
 .social-links a {
     margin: 0 8px;
-    color: #004d40;
-    transition: transform 0.3s ease;
+    color: #00e676;
+    transition: transform 0.3s ease, color 0.3s;
 }
 
 .social-links a:hover {
-    transform: scale(1.1);
+    transform: scale(1.2);
+    color: #004d40;
 }
 
 /* Navbar Styling */
 nav {
-    background-color: #333;
-    padding: 10px 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 15px 0;
     text-align: center;
     position: sticky;
     top: 0;
     z-index: 1000;
+    backdrop-filter: blur(10px); /* Sleek futuristic backdrop effect */
 }
 
 nav ul {
@@ -90,7 +115,7 @@ nav ul {
     margin: 0;
     padding: 0;
     display: flex;
-    flex-direction: column; /* Mobile-first stacking */
+    flex-direction: column;
     align-items: center;
 }
 
@@ -110,28 +135,22 @@ nav ul li a:hover {
     color: #004d40;
     background-color: #00e676;
     border-radius: 5px;
-    text-decoration: underline;
 }
 
 /* Section Styling */
 section {
-    padding: 30px 10px;
+    padding: 50px 20px;
     background-color: white;
-    margin: 10px 0;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-}
-
-section h2 {
-    font-size: 1.6rem; /* Mobile-first size */
-    text-align: center;
-    margin-bottom: 20px;
     color: #004d40;
+    margin: 20px 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    animation: fadeInUp 0.7s ease-out forwards;
 }
 
 /* Experience and Skills Styling */
 .experience-item, .skills-list {
-    padding: 15px 0;
+    padding: 20px 0;
     border-bottom: 1px solid #e0e0e0;
 }
 
@@ -140,19 +159,19 @@ section h2 {
 }
 
 .experience-item h3, .skills-list h3 {
-    font-size: 1.2rem;
-    color: #004d40;
+    font-size: 1.3rem;
+    color: #00e676;
 }
 
 .experience-item p, .skills-list p {
-    font-size: 1rem;
+    font-size: 1.1rem;
     margin: 5px 0;
 }
 
 /* Skills Section */
 .skills-list {
     margin-bottom: 20px;
-    padding: 10px;
+    padding: 15px;
     border-bottom: 1px solid #e0e0e0;
 }
 
@@ -160,56 +179,45 @@ section h2 {
     border-bottom: none;
 }
 
-.skills-list h3 {
-    font-size: 1.2rem;
-    color: #004d40;
-    margin-bottom: 10px;
-}
-
-.skills-list p {
-    font-size: 1rem;
-    line-height: 1.6;
-    margin-bottom: 0;
-}
-
 /* Projects Section */
 .project-grid {
     display: grid;
     grid-template-columns: 1fr; /* Single column for smaller screens */
-    gap: 15px;
+    gap: 20px;
 }
 
 .project-card {
     background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
     text-align: center;
-    padding: 15px;
-    transition: transform 0.3s ease;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
 }
 
 .project-card img {
     width: 100%;
     height: auto;
-    border-radius: 10px 10px 0 0;
+    border-radius: 12px 12px 0 0;
 }
 
 .project-card h3 {
     text-align: center;
     padding: 10px;
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     color: #004d40;
 }
 
 .project-card p {
     text-align: center;
     padding: 10px;
-    font-size: 0.9rem;
+    font-size: 1rem;
 }
 
 .project-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
 
 /* Footer Styling */
@@ -217,7 +225,9 @@ footer {
     background-color: #333;
     color: white;
     text-align: center;
-    padding: 10px;
+    padding: 20px;
+    margin-top: 30px;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.3);
 }
 
 /* Scroll Animation */
@@ -234,20 +244,8 @@ footer {
 
 .section {
     opacity: 0;
-    animation: fadeInUp 0.5s ease-out forwards;
+    animation: fadeInUp 0.7s ease-out forwards;
     animation-delay: 0.3s;
-}
-
-/* Input Focus Effects */
-input, textarea {
-    transition: all 0.2s ease;
-    transform-origin: left center;
-}
-
-input:focus, textarea:focus {
-    transform: scale(1.02);
-    border-color: #00e676;
-    box-shadow: 0 0 8px rgba(0, 230, 118, 0.8);
 }
 
 /* Media Queries for Larger Screens */
@@ -274,7 +272,7 @@ input:focus, textarea:focus {
     }
 
     section {
-        padding: 50px 20px;
+        padding: 70px 20px;
     }
 
     h2 {
