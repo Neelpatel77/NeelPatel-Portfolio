@@ -8,8 +8,23 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+<style>
+    .container {
+        width: 100%; /* Full width */
+        text-align: center; /* Center text horizontally */
+        padding: 20px; /* Padding around the content */
+        box-sizing: border-box; /* Include padding in width calculation */
+    }
+
+    .experience-item, .education-item, .skills-list {
+        max-width: 800px; /* Max width of content blocks */
+        margin: auto; /* Center these blocks horizontally */
+        text-align: left; /* Align text to the left within these blocks */
+    }
+</style>
 
     <style>
+        
         /* Basic Body Styling */
         body {
             font-family: 'Poppins', sans-serif;
@@ -213,35 +228,35 @@
     </section>
 <!-- Experience -->
 <!-- Experience -->
-<section id="experience" style="text-align: center; max-width: 800px; margin: auto;">
+<section id="experience" class="container">
     <h2>Experience</h2>
-    <div style="text-align: justify;">
+    <div class="experience-item">
         <h3>DevOps/Software Engineer, HCL Technology (Remote)</h3>
         <p>May 2023 - May 2024</p>
     </div>
-    <div style="text-align: justify;">
+    <div class="experience-item">
         <h3>Software Engineer, zCon Solutions Pvt. Ltd.</h3>
         <p>Jun 2022 - Jan 2023</p>
     </div>
-    <div style="text-align: justify;">
+    <div class="experience-item">
         <h3>Software Engineer, Cognizant (Hybrid)</h3>
         <p>Jan 2021 - Mar 2022</p>
     </div>
-    <div style="text-align: justify;">
+    <div class="experience-item">
         <h3>Software Engineer, L&T Infotech (LTI)</h3>
         <p>Mar 2019 - Jul 2020</p>
     </div>
 </section>
 
 <!-- Education -->
-<section id="education" style="text-align: center; max-width: 800px; margin: auto;">
+<section id="education" class="container">
     <h2>Education</h2>
-    <div style="text-align: justify;">
+    <div class="education-item">
         <h3>Post Graduation in Mobile Application Development</h3>
         <p>Fanshawe College | London, Ontario, Canada</p>
         <p>GPA: 3.90/4.20</p>
     </div>
-    <div style="text-align: justify;">
+    <div class="education-item">
         <h3>Bachelors Degree in Computer Engineering (B.Eng.)</h3>
         <p>Gujarat Technological University | Ahmedabad, Gujarat, India</p>
         <p>CGPA: 8.33/10.00</p>
@@ -249,21 +264,22 @@
 </section>
 
 <!-- Skills -->
-<section id="skills" style="text-align: center; max-width: 800px; margin: auto;">
+<section id="skills" class="container">
     <h2>Skills</h2>
-    <div style="text-align: justify;">
+    <div class="skills-list">
         <h3>Programming Languages and Frameworks:</h3>
         <p>JavaScript, Java, Typescript, C++, C#, .NET, Kotlin, Swift, Objective-C, React Native</p>
     </div>
-    <div style="text-align: justify;">
+    <div class="skills-list">
         <h3>Full-Stack Web Development:</h3>
         <p>React.js, Angular.js, Node.js, Express.js, Next.js</p>
     </div>
-    <div style="text-align: justify;">
+    <div class="skills-list">
         <h3>Mobile Development:</h3>
         <p>Android SDK, iOS SDK, Kotlin, Swift, SwiftUI, Java, React Native, Objective-C, Xamarin</p>
     </div>
 </section>
+
 
 
  
