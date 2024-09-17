@@ -23,6 +23,26 @@ header h1 {
     font-size: 28px;
     font-weight: bold;
 }
+.container {
+    max-width: 800px;
+    margin: 0 auto; /* Center the container horizontally */
+    text-align: center; /* Center the text within the container */
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+}
 
 header p {
     margin: 5px;
