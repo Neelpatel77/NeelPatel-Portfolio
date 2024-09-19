@@ -37,29 +37,26 @@
             scroll-behavior: smooth;
         }
 
-        /* Navbar Styling */
+        /* Navbar for large screens */
         nav {
             background-color: #004d40;
             position: sticky;
             top: 0;
             z-index: 1000;
             padding: 15px 0;
+            display: flex;
+            justify-content: center;
         }
 
         nav ul {
             list-style: none;
-            display: none; /* Hidden by default on mobile */
-            flex-direction: column;
+            display: flex;
+            justify-content: center;
             margin: 0;
-            padding: 0;
-        }
-
-        nav ul.active {
-            display: flex; /* Show when toggled */
         }
 
         nav ul li {
-            margin: 10px 0;
+            margin: 0 20px;
         }
 
         nav ul li a {
@@ -76,15 +73,52 @@
             border-radius: 5px;
         }
 
-        /* Menu Icon Styling */
+        /* Sidebar Navigation Styling (for mobile only) */
+        .side-nav {
+            height: 100%; /* Full height */
+            width: 0; /* Initially hidden */
+            position: fixed; /* Stay in place */
+            top: 0;
+            left: 0;
+            background-color: #004d40;
+            overflow-x: hidden; /* Disable horizontal scroll */
+            transition: 0.5s; /* Smooth slide-in effect */
+            padding-top: 60px; /* Padding for menu items */
+            z-index: 1000; /* Ensure it overlays content */
+        }
+
+        .side-nav a {
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 25px;
+            color: white;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .side-nav a:hover {
+            background-color: #00e676;
+            color: #004d40;
+        }
+
+        .side-nav .close-btn {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            font-size: 36px;
+            color: white;
+        }
+
+        /* Menu Icon Styling (only visible on mobile) */
         .menu-icon {
             font-size: 30px;
             cursor: pointer;
             color: white;
             position: absolute;
             top: 15px;
-            right: 20px;
-            display: block;
+            left: 20px;
+            display: none;
+            z-index: 1001;
         }
 
         /* Header Styling */
@@ -200,13 +234,17 @@
         }
 
         @media (max-width: 768px) {
-            .project-grid {
-                grid-template-columns: 1fr;
+            nav ul {
+                display: none; /* Hide the top navbar on mobile */
             }
 
-            /* Show the menu icon on smaller screens */
+            /* Show the sidebar and menu icon on mobile */
             .menu-icon {
                 display: block;
+            }
+
+            .project-grid {
+                grid-template-columns: 1fr;
             }
         }
 
@@ -221,9 +259,22 @@
 </head>
 <body style="background-image: url('BGimage.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
 
-    <!-- Navbar -->
+    <!-- Sidebar (hidden by default, visible on mobile) -->
+    <div id="sideNav" class="side-nav">
+        <a href="javascript:void(0)" class="close-btn" onclick="closeNav()">&times;</a>
+        <a href="#about">About</a>
+        <a href="#education">Education</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="Contact.html">Contact</a>
+    </div>
+
+    <!-- Menu Icon to open the sidebar (visible on mobile) -->
+    <div class="menu-icon" onclick="openNav()">&#9776;</div>
+
+    <!-- Navbar (visible on larger screens) -->
     <nav>
-        <div class="menu-icon">&#9776;</div> <!-- Menu Icon -->
         <ul>
             <li><a href="#about">About</a></li>
             <li><a href="#education">Education</a></li>
@@ -238,7 +289,7 @@
         <img src="Neel Patel Picture.jpeg" alt="Neel Patel">
         <h1>Neel Patel</h1>
         <p>Software Engineer, Problem Solver, Innovator, Quick Learner</p>
-    <p>+1 6478970169 | <a href="mailto:neel77306@gmail.com" style="color: #ffffff;">neel77306@gmail.com</a></p>
+        <p>+1 6478970169 | <a href="mailto:neel77306@gmail.com" style="color: #ffffff;">neel77306@gmail.com</a></p>
     </header>
 
     <!-- Social Links -->
@@ -294,19 +345,24 @@
             <h3>Programming Languages and Frameworks:</h3>
             <p>JavaScript, Java, Typescript, C++, C#, .NET, Kotlin, Swift, Objective-C, React Native</p>
         </div>
-        <!-- Add more skill sections as needed -->
     </section>
 
-   <section class="project-section fadeInUp">
+    <section class="project-section fadeInUp">
         <div class="container">
             <div class="project-grid">
-                <!-- Repeat the following block for each project card (total 9 cards) -->
                 <!-- Project Card 1 -->
                 <div class="project-card" onclick="window.open('https://www.youtube.com/watch?v=UWvZlsfw-i8', '_blank')">
                     <img src="ReactNative.png" alt="Project 1 Thumbnail">
                     <h3>FitLit Pro</h3>
                     <p>A Complete Fitness App to store data on cloud and used modern app development</p>
                 </div>
+                <!-- More project cards -->
+            </div>
+        </div>
+    </section>  
+
+
+
     <!-- Project Card 2 -->
 <div class="project-card" onclick="window.open('https://www.youtube.com/watch?v=3k4SxvNLQW0', '_blank')">
     <img src="iOS.png" alt="Project 2 Thumbnail">
@@ -372,18 +428,21 @@
 </section>  
 
 
+   
     <!-- Footer -->
     <footer>
         <p>&copy; 2024 Neel Patel</p>
     </footer>
 
+    <!-- JavaScript for side navigation (mobile only) -->
     <script>
-        const menuIcon = document.querySelector('.menu-icon');
-        const navMenu = document.querySelector('nav ul');
+        function openNav() {
+            document.getElementById("sideNav").style.width = "250px"; /* Adjust the width as needed */
+        }
 
-        menuIcon.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
-        });
+        function closeNav() {
+            document.getElementById("sideNav").style.width = "0";
+        }
     </script>
 </body>
 </html>
