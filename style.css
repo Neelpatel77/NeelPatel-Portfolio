@@ -246,9 +246,26 @@ footer {
         grid-template-columns: repeat(2, 1fr);
     }
 }
+footer a {
+    color: white;
+    text-decoration: none;
+    margin-left: 10px;
+}
 
+footer a:hover {
+    text-decoration: none; /* Ensure no underline on hover as well */
+}
 @media (min-width: 1024px) {
     .project-grid {
         grid-template-columns: repeat(3, 1fr);
     }
+}
+footer a {
+    color: white;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+footer a:hover {
+    text-decoration: none; /* Ensure no underline on hover as well */
 }
