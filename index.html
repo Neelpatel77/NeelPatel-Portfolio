@@ -14,23 +14,20 @@
         html {
             scroll-behavior: smooth;
         }
-<style>
-    .container {
-        width: 100%; /* Full width */
-        text-align: center; /* Center text horizontally */
-        padding: 20px; /* Padding around the content */
-        box-sizing: border-box; /* Include padding in width calculation */
-    }
-
-    .experience-item, .education-item, .skills-list {
-        max-width: 800px; /* Max width of content blocks */
-        margin: auto; /* Center these blocks horizontally */
-        text-align: left; /* Align text to the left within these blocks */
-    }
-</style>
-
-    <style>
         
+        .container {
+            width: 100%; /* Full width */
+            text-align: center; /* Center text horizontally */
+            padding: 20px; /* Padding around the content */
+            box-sizing: border-box; /* Include padding in width calculation */
+        }
+
+        .experience-item, .education-item, .skills-list {
+            max-width: 800px; /* Max width of content blocks */
+            margin: auto; /* Center these blocks horizontally */
+            text-align: left; /* Align text to the left within these blocks */
+        }
+
         /* Basic Body Styling */
         body {
             font-family: 'Poppins', sans-serif;
@@ -51,13 +48,18 @@
 
         nav ul {
             list-style: none;
-            display: flex;
-            justify-content: center;
+            display: none; /* Hidden by default on mobile */
+            flex-direction: column;
             margin: 0;
+            padding: 0;
+        }
+
+        nav ul.active {
+            display: flex; /* Show when toggled */
         }
 
         nav ul li {
-            margin: 0 20px;
+            margin: 10px 0;
         }
 
         nav ul li a {
@@ -72,6 +74,17 @@
             background-color: #00e676;
             color: #004d40;
             border-radius: 5px;
+        }
+
+        /* Menu Icon Styling */
+        .menu-icon {
+            font-size: 30px;
+            cursor: pointer;
+            color: white;
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            display: block;
         }
 
         /* Header Styling */
@@ -190,6 +203,11 @@
             .project-grid {
                 grid-template-columns: 1fr;
             }
+
+            /* Show the menu icon on smaller screens */
+            .menu-icon {
+                display: block;
+            }
         }
 
         /* Footer */
@@ -203,16 +221,16 @@
 </head>
 <body style="background-image: url('BGimage.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
 
-
     <!-- Navbar -->
     <nav>
+        <div class="menu-icon">&#9776;</div> <!-- Menu Icon -->
         <ul>
             <li><a href="#about">About</a></li>
             <li><a href="#education">Education</a></li>
             <li><a href="#experience">Experience</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#projects">Projects</a></li>
-             <li><a href="Contact.html">Contact</a></li>
+            <li><a href="Contact.html">Contact</a></li>
         </ul>
     </nav>
 
@@ -268,52 +286,17 @@
             <p>CGPA: 8.33/10.00</p>
         </div>
     </section>
-<!-- Skills Section -->
-<section id="skills" class="container">
-    <h2>Skills</h2>
-    <div class="skills-list">
-        <h3>Programming Languages and Frameworks:</h3>
-        <p>JavaScript, Java, Typescript, C++, C#, .NET, Kotlin, Swift, Objective-C, React Native</p>
-    </div>
-    <div class="skills-list">
-        <h3>Full-Stack Web Development:</h3>
-        <p>React.js, Angular.js, Node.js, Express.js, Next.js</p>
-    </div>
-    <div class="skills-list">
-        <h3>Mobile Development:</h3>
-        <p>Android SDK, iOS SDK, Kotlin, Swift, SwiftUI, Java, React Native, Objective-C, Xamarin</p>
-    </div>
-    <div class="skills-list">
-        <h3>Database Management:</h3>
-        <p>Firebase, MongoDB, Oracle Database, PostgreSQL, SQL, Room Database, SQLite</p>
-    </div>
-    <div class="skills-list">
-        <h3>DevOps and Deployment:</h3>
-        <p>AWS, Azure, Docker, Continuous Integration and Deployment, Google Cloud Platform, Google Compute Engine, Kubernetes, Git, GitHub, CircleCI, Jenkins, GitLab CI, Terraform, Ansible</p>
-    </div>
-    <div class="skills-list">
-        <h3>APIs and Architecture:</h3>
-        <p>RESTful API, GraphQL, Application Architecture</p>
-    </div>
-    <div class="skills-list">
-        <h3>Software Engineering:</h3>
-        <p>Software Testing, Software Security, Dependency Injection, Jira, Development Methodologies, Data Structures and Algorithms, Prometheus, Grafana, ELK Stack, New Relic, Datadog</p>
-    </div>
-    <div class="skills-list">
-        <h3>Security:</h3>
-        <p>OAuth, JWT, OWASP, SSL, TLS, OpenID Connect</p>
-    </div>
-    <div class="skills-list">
-        <h3>General Skills:</h3>
-        <p>SDK Development, Library Development, Third-Party Integration, Scalability, Cloud Architecture, Infrastructure as Code, Containerization, Monitoring, Logging, Agile Methodologies, Project Management, Jira, Trello, Asana, Collaboration Tools, Slack, Microsoft Teams, Version Control, Git, GitHub, GitLab, Unit Testing, Integration Testing, End-to-End Testing, API Management, API Gateway, Swagger, Data Processing, Load Balancing, Networking</p>
-    </div>
-</section>
 
+    <!-- Skills Section -->
+    <section id="skills" class="container">
+        <h2>Skills</h2>
+        <div class="skills-list">
+            <h3>Programming Languages and Frameworks:</h3>
+            <p>JavaScript, Java, Typescript, C++, C#, .NET, Kotlin, Swift, Objective-C, React Native</p>
+        </div>
+        <!-- Add more skill sections as needed -->
+    </section>
 
-
-
- 
- 
    <section class="project-section fadeInUp">
         <div class="container">
             <div class="project-grid">
@@ -394,5 +377,13 @@
         <p>&copy; 2024 Neel Patel</p>
     </footer>
 
+    <script>
+        const menuIcon = document.querySelector('.menu-icon');
+        const navMenu = document.querySelector('nav ul');
+
+        menuIcon.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+    </script>
 </body>
 </html>
